@@ -1,0 +1,147 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Helvetica;
+  }
+  
+  /* Styling for the top bar */
+  .top-bar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    height: 50px;
+  }
+  
+  /* Styling for the sidebar */
+  .sidebar {
+    background-color: #f0f0f0;
+    padding: 10px;
+    float: left; /* Float the sidebar to the left */
+    width: 200px;
+  }
+
+  .content {
+    display: flex;
+    flex: 1; /* Take remaining space */
+    height: 100%;
+    width: 100%;
+  }
+
+  .main-content {
+    flex: 1; /* Main content takes remaining space */
+    overflow: hidden; /* Prevent overflowing */
+    width: 100%; /* Fill available space */
+    position: relative; /* Establish positioning context */
+  }
+
+  .container {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the container */
+  }
+
+.container.visible {
+    opacity: 1;
+    visibility: visible;
+    max-width: 550px;
+    min-width: 250px;
+    width: 40%;
+    background-color: #fff;
+    padding: 15px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    font-family: Helvetica;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+.date-input {
+    margin-bottom: 20px;
+}
+
+.input-div {
+    margin-bottom: 20px;
+}
+
+.image-input-div {
+    margin-bottom: 20px;
+}
+
+.image-input-div input[type="file"] {
+    display: none;
+}
+
+.image-input-div label {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    
+}
+
+.image-input-div label:hover {
+    background-color: #e0e0e0;
+}
+
+.toggleButtonsec{
+    display: flex;
+    padding:10px;
+    justify-content:space-around;
+}
+
+.toggleButton {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.toggleButton.active {
+    background-color: #0056b3;
+}
+
