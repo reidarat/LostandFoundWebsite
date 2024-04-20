@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+    <link rel="stylesheet" href="report.css">
+</head>
+<body>
+    <div class="top-bar">Top Bar</div>
+    <div class="content">
+        <div class="sidebar">Left Sidebar</div>
+        <div class="main-content">
+            <div class="toggleButtonsec">
+                <button id="toggleButton" class="toggleButton FI" onclick="toggleForm()">Report for Found Item</button>
+                <button id="toggleButton2" class="toggleButton LI" onclick="toggleForm2()">Report for Lost Item</button>
+            </div>
+
+            <!-- First Container -->
+            <div class="container" id="formContainer">
+                <form id="userForm" action="save_report.php" method="POST">
+                
+                    <!-- Retriever Info -->
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter Your Name...">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="grade">Grade:</label>
+                        <select id="grade" name="grade" onchange="updateTertiaryCategory()">
+                            <option value="" disabled selected>Select your Grade</option>
+                            <option value="CASA">CASA</option>
+                            <option value="1">Grade 1</option>
+                            <option value="2">Grade 2</option>
+                            <option value="3">Grade 3</option>
+                            <option value="4">Grade 4</option>
+                            <option value="5">Grade 5</option>
+                            <option value="6">Grade 6</option>
+                            <option value="7">Grade 7</option>
+                            <option value="8">Grade 8</option>
+                            <option value="9">Grade 9</option>
+                            <option value="10">Grade 10</option>
+                            <option value="11">Grade 11</option>
+                            <option value="12">Grade 12</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group" id="sectionGroup" style="display: none;">
+                        <label for="section">Section:</label>
+                        <select id="section" name="section">
+                            <!-- Section options will be populated dynamically based on the selection in the Grade dropdown -->
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Email">Your Email:</label>
+                        <input type="text" id="Email" name="Email" required placeholder="Enter your Email Adress...">
+                    </div>
+
+                    <!-- Item Found Info -->
+                    <div class="form-group">
+                        <label for="ItemName">Item Name:</label>
+                        <input type="text" id="ItemName" name="ItemName" required placeholder="Enter the Name of Item...">
+                    </div>
+                    
+                    <div class="date-input">
+                        <label for="ItemFoundDate"> Date Found:</label>
+                        <input type="date" id="ItemFoundDate" name="ItemFoundDate">
+                    </div>
+
+                    <div class="input-div">
+                        <label for="ItemDescription"> Item Description:</label>
+                        <textarea id="ItemDescription" name="ItemDescription" rows="3" placeholder="Enter Item Description..."></textarea>
+                    </div>
+
+                    <div class="image-input-div">
+                        <input type="file" id="image-upload" name="image-upload" accept="image/*">
+                        <label for="image-upload">Click here to upload an image</label>
+                    </div>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+
+            <!-- Second Container -->
+            <div class="container" id="formContainer2">
+                <form id="userForm2">
+                
+                    <!-- Retriever Info -->
+                    <div class="form-group">
+                        <label for="name2">Name:</label>
+                        <input type="text" id="name2" name="name2" required placeholder="Enter Your Name...">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="grade2">Grade:</label>
+                        <select id="grade2" name="grade2" onchange="updateTertiaryCategory()">
+                            <option value="" disabled selected>Select your Grade</option>
+                            <option value="CASA">CASA</option>
+                            <option value="1">Grade 1</option>
+                            <option value="2">Grade 2</option>
+                            <option value="3">Grade 3</option>
+                            <option value="4">Grade 4</option>
+                            <option value="5">Grade 5</option>
+                            <option value="6">Grade 6</option>
+                            <option value="7">Grade 7</option>
+                            <option value="8">Grade 8</option>
+                            <option value="9">Grade 9</option>
+                            <option value="10">Grade 10</option>
+                            <option value="11">Grade 11</option>
+                            <option value="12">Grade 12</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group" id="sectionGroup2" style="display: none;">
+                        <label for="section2">Section:</label>
+                        <select id="section2" name="section2">
+                            <!-- Section options will be populated dynamically based on the selection in the Grade dropdown -->
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Email">Your Email:</label>
+                        <input type="text" id="Email2" name="Email2" required placeholder="Enter your Email Adress...">
+                    </div>
+
+                    <!-- Item Found Info -->
+                    <div class="form-group">
+                        <label for="ItemName2">Item Name:</label>
+                        <input type="text" id="ItemName2" name="ItemName2" required placeholder="Enter the Name of Item...">
+                    </div>
+                    
+                    <div class="date-input">
+                        <label for="ItemFoundDate2"> Date Lost:</label>
+                        <input type="date" id="ItemFoundDate2" name="ItemFoundDate2">
+                    </div>
+
+                    <div class="input-div">
+                        <label for="ItemDescription2"> Item Description:</label>
+                        <textarea id="ItemDescription2" name="ItemDescription2" rows="3" placeholder="Enter Item Description..."></textarea>
+                    </div>
+
+                    <div class="image-input-div">
+                        <input type="file" id="image-upload2" name="image-upload2" accept="image/*">
+                        <label for="image-upload2">Click here to upload an image</label>
+                    </div>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="report.js"></script>
+
+</body>
+</html>
