@@ -1,0 +1,141 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Helvetica;
+}
+
+.mainpage{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Set min-height to 100% of viewport height */
+}
+
+/* Styling for the top bar */
+.top-bar {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  height: 50px;
+}
+
+/* Styling for the sidebar */
+.sidebar {
+  background-color: #f0f0f0;
+  padding: 10px;
+  float: left; /* Float the sidebar to the left */
+  width: 200px; /* Default width */
+}
+
+@media screen and (max-width: 500px) {
+  .sidebar {
+    width: 100%; /* When screen width is 300px or less, set width to 100% */
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .sidebar {
+    width: 500px; /* When screen width is 1920px or more, set width to 300px */
+  }
+}
+
+/* Styling for the content */
+.content {
+  display: flex;
+  flex: 1; /* Take remaining space */
+}
+
+/* Styling for the main content */
+.main-content {
+  flex: 1; /* Main content takes remaining space */
+  padding: 10px;
+  overflow: hidden; /* Prevent overflowing */
+  width: 100%; /* Fill available space */
+}
+
+/* Styling for the container */
+.infocontainer {
+  margin-bottom: 8px;
+  margin-top: 8px;
+  background-color: #ffffff;
+  padding: 20px;
+  transition: max-height 0.2s ease-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* Styling for the collapsible button */
+.collapsible {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+}
+  
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+  
+.collapsible.active:after {
+    content: "\2212";
+}
+  
+.CCheader {
+    display: flex;
+    flex-direction: row;
+}
+
+.infobox {
+    padding: 8px;
+}
+  
+.boxsec1 {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+}
+
+.boxinside1 {
+    flex: 3;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.boxinside2 {
+    flex: 1;
+    padding-left: 8px;
+}
+
+.descriptionbox {
+  max-width: fit-content;
+  max-height: 80%; 
+  white-space: normal; 
+  word-wrap: break-word; 
+  height: auto; 
+  padding-right: 15px;
+}
+
+.itemimage {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.boxvalues{
+  display: flex;
+  flex-direction: row;
+}
+
+.boxvalues1{
+  flex: 1;
+}
+
+.boxvalues2{
+  flex: 1;
+}
+
