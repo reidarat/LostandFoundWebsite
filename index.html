@@ -10,22 +10,23 @@
     <div class="mainpage">
         <div class="top-bar">Top Bar</div>
         <div class="content">
-            <div class="sidebar">
-                <div class="sidebar">
-                    next page
-                    <a href="report.html">Default Show Code</a>
-                </div>
-            </div>
+            <div class="sidebar">Left Sidebar</div>
             <div class="main-content">
                 <div class="input-section">
-                    <!-- Infobox will be dynamically populated here -->
+                    <input type="text" id="nameInput" placeholder="Name">
+                    <input type="text" id="gradeInput" placeholder="Grade">
+                    <input type="text" id="sectionInput" placeholder="Section">
+                    <input type="email" id="emailInput" placeholder="Email">
+                    <input type="text" id="itemNameInput" placeholder="Item Name">
+                    <input type="date" id="dateFoundInput">
+                    <input type="file" id="imageInput" accept="image/*">
+                    <textarea id="descriptionInput" placeholder="Item Description"></textarea>
+                    <button onclick="addInfoContainer()">Submit</button>
                 </div>
             </div>
         </div>
     </div>
     
     <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!-- Include jQuery -->
-    <script src="fetch_reports.js"></script> <!-- Script for fetching reports from the database -->
 </body>
 </html>

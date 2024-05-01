@@ -3,39 +3,39 @@ body, html {
     padding: 0;
     height: 100%;
     font-family: Helvetica;
-  }
+}
   
-  /* Styling for the top bar */
-  .top-bar {
+/* Styling for the top bar */
+.top-bar {
     background-color: #333;
     color: white;
     padding: 10px;
     height: 50px;
-  }
+}
   
-  /* Styling for the sidebar */
-  .sidebar {
+/* Styling for the sidebar */
+.sidebar {
     background-color: #f0f0f0;
     padding: 10px;
     float: left; /* Float the sidebar to the left */
     width: 200px;
-  }
+}
 
-  .content {
+.content {
     display: flex;
     flex: 1; /* Take remaining space */
     height: 100%;
     width: 100%;
-  }
+}
 
-  .main-content {
+.main-content {
     flex: 1; /* Main content takes remaining space */
     overflow: hidden; /* Prevent overflowing */
     width: 100%; /* Fill available space */
     position: relative; /* Establish positioning context */
-  }
+}
 
-  .container {
+.container {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     visibility: hidden;
@@ -43,7 +43,7 @@ body, html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* Center the container */
-  }
+}
 
 .container.visible {
     opacity: 1;
@@ -92,7 +92,6 @@ input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-
 .date-input {
     margin-bottom: 20px;
 }
@@ -118,17 +117,16 @@ input[type="submit"]:hover {
     text-align: center;
     cursor: pointer;
     box-sizing: border-box;
-    
 }
 
 .image-input-div label:hover {
     background-color: #e0e0e0;
 }
 
-.toggleButtonsec{
+.toggleButtonsec {
     display: flex;
-    padding:10px;
-    justify-content:space-around;
+    padding: 10px;
+    justify-content: space-around;
 }
 
 .toggleButton {
@@ -144,4 +142,3 @@ input[type="submit"]:hover {
 .toggleButton.active {
     background-color: #0056b3;
 }
-
